@@ -1,0 +1,124 @@
+/* Dashboard Styles */
+.dashboard-page {
+  display: block;
+}
+
+.page-header {
+  padding: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.page-header h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.page-header p {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.user-list {
+  padding: 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-height: 520px;
+  overflow-y: auto;
+}
+
+/* Empty state for dashboard */
+.empty-state {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 40px 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.empty-state h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.empty-state p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.empty-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* Responsive adjustments for dashboard */
+@media (max-height: 800px) {
+  .user-list {
+    max-height: 450px;
+  }
+}
+
+/* Dashboard search styles */
+.search-container {
+  padding: 16px 20px;
+  background: white;
+}
+
+.dashboard-search {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.dashboard-search .input-with-icon {
+  margin-bottom: 0;
+}
+
+.dashboard-search .form-input {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 12px 16px 12px 46px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.dashboard-search .form-input:focus {
+  border-color: var(--mubas-blue);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(0, 58, 143, 0.1);
+}
+
+.dashboard-search .input-icon {
+  left: 16px;
+  color: var(--text-secondary);
+}
+
+.dashboard-search .clear-search-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 20px;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.dashboard-search .clear-search-btn:hover {
+  color: var(--error);
+  transform: translateY(-50%) scale(1.1);
+}
